@@ -1,0 +1,7 @@
+<div class="container" id="play_input">
+  <%= form_for :add_player,  :method=>'post' do |f| %>
+      <h3>Name:</h3><%= f.text_field :name, :placeholder=>"Enter Player Name"%>
+      <h3>Game Code:</h3><%= f.text_field :game_code, :placeholder=>"Enter 4 letter Code"%>
+      <br><%= f.submit "Join Game", class: "btn btn-primary" %>
+  <% end %>
+</div>

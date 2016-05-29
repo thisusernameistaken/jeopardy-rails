@@ -1,0 +1,16 @@
+<div class="container" id="play_input">
+    <h1>Game Code: <%= @game.gamecode %></h1>
+    <h2> Waiting for players (<i id="num"><%= "#{@game.players.length}"%></i>/<%= "#{@game.num_players})" %></h2>
+    <div id="players">
+    </div>
+</div>
+
+<script>
+    var source = new EventSource("/update/<%=@game.gamecode%>");
+    source.onmessage = function(event) {
+        if (event.data == <%= @game.num_players %>){
+            document.location = "/play/<%=@game.gamecode%>";
+        }
+        $('#num').html(event.data)
+    };
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Jeopardy">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Jeopardy</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= stylesheet_link_tag "materialize" %>
+  <%= stylesheet_link_tag "main" %>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <nav class="nav-links" role="navigation">
+      <div class="nav-wrapper container">
+        <ul >
+          <li><a href="/home">Home</a></li>
+          <li><a href="/play">Play</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <% if flash[:notice] %>
+         <h4 id="container" class="flash"><%= h flash[:notice] %></h4>
+    <hr>
+    <% end %>
+
+<%= yield %>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <%= javascript_include_tag "materialize" %>
+    <%= javascript_include_tag "main" %>
+</body>
+
+
+</html>

@@ -1,0 +1,32 @@
+<div id = "game" class = container>
+    <h2>Jeopardy! the Game. Version <%= @game.id %> </h2>
+    <h9>Using gamefile: <%= @game.gamefile %></h9>
+    <br>
+    <br>
+    <% if @game.is_active == true %>
+      <div class="tables">
+        <table border="1" style="float: left">
+        <% @categories.each do |category| %>
+          <tr>
+          <td class="category"><b><%= category.capitalize %></b></td>
+          <% @questions.where(:category=>category).each do |q| %>
+                <td class="clue"><a href="/q/<%=q.id%>"><%=q.value%></a></td>
+          <% end %>
+          </tr>
+        <% end %>
+        </table>
+        <table border="1" style="float: left">
+          <% @game.players.each do |player| %>
+              <td class="clue"><%= player.name %><br><%=player.score %></td>
+          <% end %>
+        </table>
+        </div>
+  <% else %>
+      <div class="container">
+        <%= form_for :games, :method=>'post' do |f| %>
+            <%= f.select(:number_of_players, (1..4)) %> </br>
+            <%= f.submit "Start Game", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+  <% end %>
+</div>

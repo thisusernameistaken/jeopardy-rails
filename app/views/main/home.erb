@@ -1,0 +1,63 @@
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center orange-text"><%= image_tag("logo.png", class: "logo_style", size: "700x200")%></h1>
+    <div class="row center">
+      <h5 class="header col s12 light">Play Jeopardy and compete against friends and family!</h5>
+    </div>
+    <div class="row center">
+
+      <div>
+        <div class="upload_container">
+          <%= form_for :gf, :method=>'post' do |f| %>
+              <%= f.file_field :gamefile %> </br>
+              <%= f.submit "Upload Game File!", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center" style="color: #282966"><i class="material-icons">feedback</i></h2>
+          <h5 class="center">Compete!</h5>
+
+          <p class="light">Ask the Questions for each answer provided!</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center" style="color: #282966"><i class="material-icons">grade</i></h2>
+          <h5 class="center">Have Fun!</h5>
+
+          <p class="light">Enjoy many categories of Jeopardy just like the television show!</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center" style="color: #282966"><i class="material-icons">list</i></h2>
+          <h5 class="center">Customize!</h5>
+
+          <p class="light">Upload your own questions to have a truel unique experience!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+
+
+  </div>
+</div>

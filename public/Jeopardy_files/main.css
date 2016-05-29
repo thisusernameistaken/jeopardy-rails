@@ -1,0 +1,129 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.nav-links{
+    background-color: #0000AF;
+}
+
+nav ul li:hover{
+    background-color: #b99b00;
+}
+
+.nav-title {
+    font-size: 30px;
+    left: 50%;
+    position: absolute;
+}
+
+.material-icons{
+    color: #0000AF;
+    font-size: 60px;
+}
+
+.upload_container{
+    text-align: center;
+    color: #0000AF;
+}
+
+.btn{
+    background-color:#0000AF;
+}
+
+.btn:hover{
+    background-color: #b99b00;
+}
+
+.flash{
+    text-align: center;
+    color: #b99b00;
+    font-size: 24px;
+}
+
+.container#game{
+    text-align: center;
+}
+
+tr {
+    display: block;
+    float: left;
+}
+th, td {
+    display: block;
+    text-align: center;
+}
+
+.logo_style {
+    width: 80%;
+    height: auto;
+}
+
+input#gf_gamefile {
+    width: 20%;
+}
+
+select{
+    display: block;
+    border-color: #0000AF;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+td.category {
+    background-color: #0000AF;
+    border-width: 2px;
+    border-style: outset;
+    border-bottom-color: #000088;
+    border-left-color: #0000EE;
+    border-right-color: #000099;
+    border-top-color: #0000FF;
+    width: 152px;
+    color: white;
+}
+
+td.clue {
+    vertical-align: top;
+    background-color: #0000AF;
+    border-width: 2px;
+    border-style: outset;
+    border-bottom-color: #000088;
+    border-left-color: #0000EE;
+    border-right-color: #000099;
+    border-top-color: #0000FF;
+    color: white;
+}
+
+table tr td a {
+    display:block;
+    height:100%;
+    width:100%;
+    color: white;
+}
+
+.question_category{
+
+    padding-bottom: 25px;
+    padding-top: 3%;
+}
+
+#question{
+    background: #0000AF;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.tables {
+    display: inline-flex;
+}
+
+.container#play_input{
+    text-align: center;
+}

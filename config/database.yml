@@ -1,0 +1,13 @@
+development: 
+  adapter: mysql
+  database: jeopardy_dev
+  host: "127.0.0.1"
+  username: jeopardy_admin
+  password: i8a4re525
+production:  
+  adapter: mysql
+  database: jeopardy_pro
+  host: "127.0.0.1"
+  username: jeopardy_admin
+  password: i8a4re525
+
